@@ -20,6 +20,13 @@ ${host.name} ansible_user=${group.user_for_ansible} ansible_host=${host.network[
 %{endfor~}
 
 %{endfor~}
+
+[only_via_jumphost]
+%{for group in var.groups_without_floating_ips~}
+%{for host in group.instancesobject.instances.*~}
+${host.name} ansible_user=${group.user_for_ansible} ansible_host=${host.network[0].fixed_ip_v4} internal_ip=${host.network[0].fixed_ip_v4}
+%{endfor~}
+%{endfor~}
 EOT
 }
 
