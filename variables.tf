@@ -2,7 +2,7 @@
 # Ansible inventory
 #
 
-variable "file_name_with_path" {
+variable "inventory_file_name_with_path" {
   description = "File name for the new file"
   default     = "ansible/terraform_ansible_inventory"
 }

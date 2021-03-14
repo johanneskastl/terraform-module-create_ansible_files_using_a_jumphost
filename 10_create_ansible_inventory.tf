@@ -25,6 +25,6 @@ EOT
 
 resource "local_file" "ansible_inventory" {
   content         = data.template_file.ansible_inventory_template.rendered
-  filename        = var.file_name_with_path
+  filename        = var.inventory_file_name_with_path
   file_permission = var.file_permissions
 }
