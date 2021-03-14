@@ -7,7 +7,7 @@ variable "inventory_file_name_with_path" {
   default     = "ansible/terraform_ansible_inventory"
 }
 
-variable "file_permissions" {
+variable "inventory_file_permissions" {
   description = "Permissions for the new file"
   default     = "0644"
 }
